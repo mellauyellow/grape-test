@@ -42,10 +42,6 @@ module API
 
           current_cat.update(name: params[:name]) if params[:name]
           current_cat.update(age: params[:age]) if params[:age]
-          # current_cat.update(
-          #   name: params[:name],
-          #   age: params[:age]
-          # )
         end
 
         desc "delete a cat"
