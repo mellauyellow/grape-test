@@ -44,6 +44,14 @@ module API
             age: params[:age]
           )
         end
+
+        desc "delete a cat"
+        params do
+          requires :id, type: Integer, desc: "cat id"
+        end
+        delete ":id" do
+          Cat.find(params[:id]).destroy
+        end
       end
     end
   end
